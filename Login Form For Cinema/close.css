@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .nsbm {
+    
+    font-family: Helvetica, Arial, sans-serif; 
+  }
+  
+  .ssd {
+    position: relative;
+    margin: auto;
+    width: 70px;
+    margin-top: 50px;
+    margin-right: 100px;
+    cursor: pointer;
+  }
+  
+  .ggl {
+    width: inherit;
+    text-align: center;
+  }
+  
+  label { 
+    font-size: .8em; 
+    line-height: 4em;
+    text-transform: uppercase;
+    color: rgb(255, 0, 0);
+    transition: all .3s ease-in;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .ggl:before, .ggl:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: inherit;
+    background: #FFC107;
+    left: 0;
+    transition: all .3s ease-in;
+  }
+  
+  .ggl:before {
+    top: 50%; 
+    transform: rotate(45deg);  
+  }
+  
+  .ggl:after {  
+    bottom: 50%;
+    transform: rotate(-45deg);  
+  }
+  
+  .ssd:hover label {
+    opacity: 1;
+  }
+  
+  .ssd:hover .ggl:before,
+  .ssd:hover .ggl:after {
+    transform: rotate(0);
+  }
+  
+  .ssd:hover .ggl:before {
+    top: 0;
+  }
+  
+  .ssd:hover .ggl:after {
+    bottom: 0;
+  }
